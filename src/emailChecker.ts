@@ -13,5 +13,13 @@ export function emailChecker(mail:string): boolean {
         return false;
     }
 
+    if(mail.includes(" ")){
+        return false;
+    }
+
+    
+
+
+
 return true;
 }
