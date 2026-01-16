@@ -1,9 +1,19 @@
 import { emailChecker } from "../src/emailChecker";
 
-describe("test sur la fonction email checker", () => {
+describe("test on the email checker function", () => {
 
-    test("email qui ne contient pas au moins un @", () => {
+    test("email that does not contain at least one @", () => {
         const actual = emailChecker("berkan.saritas.student.vinci.be");
+        expect(actual).toBe(false);
+    });
+
+    test("test that does not contain points for the domain name", () => {
+        const actual = emailChecker("berkan.saritas@gmailcom");
+        expect(actual).toBe(false);
+    });
+
+    test("test that contains a period at the end of the domain name", () => {
+        const actual = emailChecker("berkan.saritas@gmailcom.");
         expect(actual).toBe(false);
     });
 })

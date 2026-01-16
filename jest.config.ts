@@ -5,7 +5,7 @@ export default {
     coverageDirectory: 'coverage',
     coverageReporters: ['text', 'lcov', 'html'],
     collectCoverageFrom: ['src/**/*.ts'],
-    // seuil minimum de coverage 70%
+    // minimum coverage 70%
     coverageThreshold: {
       global: {
         branches: 70,
