@@ -4,5 +4,14 @@ export function emailChecker(mail:string): boolean {
         return false;
     }
 
+    const checker =  mail.split("@");
+    if(!checker[1].includes(".")){
+        return false;
+    }
+
+    if(checker[1].endsWith(".")){
+        return false;
+    }
+
 return true;
 }
