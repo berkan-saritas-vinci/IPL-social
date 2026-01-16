@@ -22,4 +22,14 @@ describe("test on the email checker function", () => {
         expect(actual).toBe(false);
     });
 
+    test("test that does not contain any text before the @", () => {
+        const actual = emailChecker("@gmail.com");
+        expect(actual).toBe(false);
+    });
+
+    test("test that does not contain any text after the @", () => {
+        const actual = emailChecker("berkan.saritas@");
+        expect(actual).toBe(false);
+    });
+
 })
