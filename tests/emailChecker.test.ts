@@ -32,4 +32,8 @@ describe("test on the email checker function", () => {
         expect(actual).toBe(false);
     });
 
+    test("test that works", () => {
+        const actual = emailChecker("berkan.saritas@student.vinci.be");
+    })
+
 })

@@ -17,9 +17,9 @@ export function emailChecker(mail:string): boolean {
         return false;
     }
 
-    
-
-
+    if(checker[0].length == 0){
+        return false;
+    }
 
 return true;
 }
