@@ -16,4 +16,10 @@ describe("test on the email checker function", () => {
         const actual = emailChecker("berkan.saritas@gmailcom.");
         expect(actual).toBe(false);
     });
+
+    test("test which contains a space", () => {
+        const actual = emailChecker("berkan saritas@student.vinci.be");
+        expect(actual).toBe(false);
+    });
+
 })
